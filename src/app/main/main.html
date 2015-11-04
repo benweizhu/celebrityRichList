@@ -1,42 +1,50 @@
 <div class="container">
-  <h1 class="text-center">Celebrity Rich List</h1>
+  <div id="celebrity-rich-list">
+    <h1 class="text-center">Celebrity Rich List</h1>
 
-  <div>
-    <div>
-      <label for="birthPlaceSelect">birth place</label>
-      <select name="birthPlace" id="birthPlaceSelect" ng-model="main.allInputs.birthPlace.selected">
-        <option ng-repeat="option in main.allInputs.birthPlace.options" value="{{option.id}}">{{option.name}}</option>
-      </select>
-    </div>
-    <div>
-      <label>Search: </label>
-      <input ng-model="searchText">
-    </div>
-    <div>
-      <label for="currencySelect">birth place</label>
-      <select name="currency" id="currencySelect" ng-model="main.allInputs.currency.selected">
-        <option ng-repeat="option in main.allInputs.currency.options" value="{{option.id}}">{{option.name}}</option>
-      </select>
+    <div class="text-center">A list of the Top 50 Richest Celebrities of 2014</div>
+    <div class="text-center">Reference <a href="www.google.com">a link which is too long to type</a></div>
+    <div class="filters">
+      <div>
+        <div class="query-filter">
+          <label for="birthPlaceSelect">Birthplace:</label>
+          <select name="birthPlace" id="birthPlaceSelect" ng-model="main.allInputs.birthPlace.selected">
+            <option ng-repeat="option in main.allInputs.birthPlace.options" value="{{option.id}}">{{option.name}}
+            </option>
+          </select>
+        </div>
+        <div class="query-filter">
+          <label for="currencySelect">Currency Converter:</label>
+          <select name="currency" id="currencySelect" ng-model="main.allInputs.currency.selected">
+            <option ng-repeat="option in main.allInputs.currency.options" value="{{option.id}}">{{option.name}}</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="query-filter">
+          <label>Search: </label>
+          <input ng-model="searchText" placeholder="Search">
+        </div>
+        <div class="query-filter">
+          <label for="orderBySelect">Order By:</label>
+          <select name="order" id="orderBySelect" ng-model="main.allInputs.order.selected">
+            <option ng-repeat="option in main.allInputs.order.options" value="{{option.id}}">{{option.name}}</option>
+          </select>
+        </div>
+      </div>
     </div>
 
-    <div>
-      <label for="orderBySelect">Order By:</label>
-      <select name="order" id="orderBySelect" ng-model="main.allInputs.order.selected">
-        <option ng-repeat="option in main.allInputs.order.options" value="{{option.id}}">{{option.name}}</option>
-      </select>
+    <div class="celebrities">
+      <div class="celebrity"
+           ng-repeat="celebrity in main.data.celebrityList | filter:searchText | countryFilter: main.allInputs.birthPlace.selected | rankFilter: main.allInputs.order.selected">
+        <div class="rank">No.{{celebrity.rank}}</div>
+        <div>Name:{{celebrity.name}}</div>
+        <div>Net Worth:{{celebrity.netWorth | currencyConverter: main.allInputs.currency.selected:main.currencyRate}}
+        </div>
+        <div>Age:{{celebrity.age}}</div>
+        <div>Country of Birth:{{celebrity.country}}</div>
+      </div>
     </div>
   </div>
-
-  <div>
-    <div
-      ng-repeat="celebrity in main.data.celebrityList | filter:searchText | countryFilter: main.allInputs.birthPlace.selected | rankFilter: main.allInputs.order.selected">
-      <div>No.{{celebrity.rank}}</div>
-      <div>Name:{{celebrity.name}}</div>
-      <div>Net Worth:{{celebrity.netWorth | currencyConverter: main.allInputs.currency.selected:main.currencyRate}}</div>
-      <div>Age:{{celebrity.age}}</div>
-      <div>Country of Birth:{{celebrity.country}}</div>
-    </div>
-  </div>
-
 
 </div>

@@ -12,18 +12,33 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 // bower:scss
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-.thumbnail {
-  height: 200px;
-
-  img.pull-right {
-    width: 50px;
+#celebrity-rich-list {
+  .filters {
+    width: 50%;
+    margin: 0 auto;
+    .query-filter {
+      display: inline-block;
+      width: calc(50% - 2px);
+      label {
+        display: block;
+      }
+      input, select {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .celebrities {
+    width: 50%;
+    margin: 10px auto auto;
+    .celebrity {
+      border: 1px solid grey;
+      text-align: center;
+      .rank {
+        color: white;
+        background-color: #044A6C;
+      }
+    }
   }
 }
 
