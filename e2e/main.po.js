@@ -8,6 +8,10 @@
 var MainPage = function() {
   this.container = element(by.css('.container'));
   this.title = this.container.element(by.css('h1'));
+  this.birthPlace = this.container.element(by.model('main.allInputs.birthPlace.selected'));
+  this.searchText = this.container.element(by.model('searchText'));
+  this.currency = this.container.element(by.model('main.allInputs.currency.selected'));
+  this.order = this.container.element(by.model('main.allInputs.order.selected'));
 };
 
 module.exports = new MainPage();

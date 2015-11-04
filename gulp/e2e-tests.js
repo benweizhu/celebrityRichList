@@ -29,6 +29,7 @@ function runProtractor (done) {
     .on('end', function () {
       // Close browser sync server
       browserSync.exit();
+      process.exit();
       done();
     });
 }
