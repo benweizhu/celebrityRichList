@@ -10,7 +10,12 @@
       .when('/', {
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
-        controllerAs: 'main'
+        controllerAs: 'main',
+        resolve: {
+          celebrityList: function(celebrityList) {
+            return celebrityList.get().$promise;
+          }
+        }
       })
       .otherwise({
         redirectTo: '/'
