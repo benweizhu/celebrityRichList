@@ -28,6 +28,14 @@
       }
     ];
 
+    var currencyRate = {
+      "base": "USD",
+      "date": "2015-11-03",
+      "rates": {
+        "AUD": 1.5
+      }
+    };
+
     beforeEach(function () {
       module('celebrityRichList');
 
@@ -46,6 +54,12 @@
         "age": "84",
         "country": "Australia"
       }]);
+    });
+
+    it('should change US Dollar to Australia Dollar', function () {
+      var result = $filter('currencyConverter')(100, 'AUD', currencyRate);
+
+      expect(result).toEqual('$AUD150');
     });
   });
 })();

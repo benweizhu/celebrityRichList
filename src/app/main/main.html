@@ -12,6 +12,12 @@
       <label>Search: </label>
       <input ng-model="searchText">
     </div>
+    <div>
+      <label for="currencySelect">birth place</label>
+      <select name="currency" id="currencySelect" ng-model="main.allInputs.currency.selected">
+        <option ng-repeat="option in main.allInputs.currency.options" value="{{option.id}}">{{option.name}}</option>
+      </select>
+    </div>
   </div>
 
   <div>
@@ -19,7 +25,7 @@
       ng-repeat="celebrity in main.data.celebrityList | filter:searchText | countryFilter: main.allInputs.birthPlace.selected">
       <div>No.{{celebrity.rank}}</div>
       <div>Name:{{celebrity.name}}</div>
-      <div>Net Worth:{{celebrity.netWorth}}</div>
+      <div>Net Worth:{{celebrity.netWorth | currencyConverter: main.allInputs.currency.selected:main.currencyRate}}</div>
       <div>Age:{{celebrity.age}}</div>
       <div>Country of Birth:{{celebrity.country}}</div>
     </div>

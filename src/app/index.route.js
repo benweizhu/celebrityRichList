@@ -12,8 +12,11 @@
         controller: 'MainController',
         controllerAs: 'main',
         resolve: {
-          celebrityList: function(celebrityList) {
+          celebrityList: function (celebrityList) {
             return celebrityList.get().$promise;
+          },
+          currencyRate: function (currencyRate) {
+            return currencyRate.get().$promise;
           }
         }
       })

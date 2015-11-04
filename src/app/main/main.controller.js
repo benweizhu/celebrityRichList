@@ -6,13 +6,22 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController(celebrityList) {
+  function MainController(celebrityList, currencyRate) {
     var vm = this;
     vm.data = celebrityList;
+    vm.currencyRate = currencyRate;
     vm.allInputs = {
       birthPlace: {
         options: birthPlaceOptions(celebrityList.celebrityList),
         selected: 'Show All'
+      },
+      currency: {
+        options: [
+          {id: 'USD', name: 'US Dollar'},
+          {id: 'EUR', name: 'Euro'},
+          {id: 'AUD', name: 'Australia Dollar'}
+        ],
+        selected: 'USD'
       }
     };
 
