@@ -1,4 +1,7 @@
 # celebrityRichList
 
-# you need to install node with npm first
-# then run "npm install" and "bower install" to download the dependencies
+### you need to install node with npm first
+### then run "npm install" and "bower install" to download the dependencies
+### execute "gulp" to run build
+### execute "gulp test" to run unit test
+### execute "gulp protractor" to run e2e test
