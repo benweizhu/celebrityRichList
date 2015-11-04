@@ -22,6 +22,14 @@
           {id: 'AUD', name: 'Australia Dollar'}
         ],
         selected: 'USD'
+      },
+      order: {
+        options: [
+          {id: 'Rank', name: 'Rank'},
+          {id: 'Age', name: 'Age'},
+          {id: 'Name', name: 'Name'}
+        ],
+        selected: 'Rank'
       }
     };
 
@@ -33,19 +41,9 @@
         .uniq(function (item) {
           return item.id;
         })
-        .sort(sortByAlphabet)
+        .sortBy('id')
         .unshift({id: 'Show All', name: 'Show All'})
         .value()
-    }
-
-    function sortByAlphabet(itemA, itemB) {
-      if (itemA.id < itemB.id) {
-        return -1;
-      } else if (itemB.id < itemA.id) {
-        return 1;
-      } else {
-        return 0;
-      }
     }
   }
 })();

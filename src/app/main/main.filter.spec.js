@@ -9,7 +9,7 @@
         "rank": 1,
         "name": "John Walton",
         "netWorth": 21000000000,
-        "age": "68",
+        "age": "98",
         "country": "United States"
       },
       {
@@ -60,6 +60,64 @@
       var result = $filter('currencyConverter')(100, 'AUD', currencyRate);
 
       expect(result).toEqual('$AUD150');
+    });
+
+    it('should order by rank', function () {
+      var result = $filter('rankFilter')(items, 'Rank');
+      expect(result).toEqual(items);
+    });
+
+    it('should order by age', function () {
+      var result = $filter('rankFilter')(items, 'Age');
+      expect(result).toEqual([
+        {
+          "rank": 2,
+          "name": "Rupert Murdoch",
+          "netWorth": 14000000000,
+          "age": "84",
+          "country": "Australia"
+        },
+        {
+          "rank": 3,
+          "name": "Donald Newhouse",
+          "netWorth": 8400000000,
+          "age": "85",
+          "country": "United States"
+        }, {
+          "rank": 1,
+          "name": "John Walton",
+          "netWorth": 21000000000,
+          "age": "98",
+          "country": "United States"
+        }
+      ]);
+    });
+
+    it('should order by name', function () {
+      var result = $filter('rankFilter')(items, 'Name');
+      expect(result).toEqual([
+        {
+          "rank": 3,
+          "name": "Donald Newhouse",
+          "netWorth": 8400000000,
+          "age": "85",
+          "country": "United States"
+        },
+        {
+          "rank": 1,
+          "name": "John Walton",
+          "netWorth": 21000000000,
+          "age": "98",
+          "country": "United States"
+        },
+        {
+          "rank": 2,
+          "name": "Rupert Murdoch",
+          "netWorth": 14000000000,
+          "age": "84",
+          "country": "Australia"
+        }
+      ]);
     });
   });
 })();
