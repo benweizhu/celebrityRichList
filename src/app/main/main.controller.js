@@ -8,7 +8,7 @@
   /** @ngInject */
   function MainController(celebrityList) {
     var vm = this;
-    vm.celebrityList = celebrityList;
+    vm.data = celebrityList;
     vm.allInputs = {
       birthPlace: {
         options: birthPlaceOptions(celebrityList.celebrityList),

@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  describe('controllers', function () {
+  describe('main controller', function () {
     var vm;
 
     var celebrityList = {
@@ -40,7 +40,7 @@
     }));
 
     it('should assign celebrityList to vm.celebrityList', function () {
-      expect(vm.celebrityList).toEqual(celebrityList);
+      expect(vm.data).toEqual(celebrityList);
     });
 
     it('should add "show all" and sorted options for birthPlace', function () {
