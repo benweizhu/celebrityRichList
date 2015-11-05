@@ -14,6 +14,5 @@ execute **"gulp"** to run build
 execute **"gulp serve"** to start the local server   
 execute **"gulp test"** to run unit test   
 execute **"gulp protractor"** to run e2e test   
-execute **"npm test"** to run full build(build & test & e2e test) test   
 
 
