@@ -10,3 +10,4 @@ deploy:
   provider: heroku
   api_key:
     secure: "fa355fa8-ed14-44d1-b8e1-93a9936d9727"
+  app: 'celebrityrichlist'
