@@ -10,6 +10,6 @@ deploy:
   provider: heroku
   api_key:
     secure: QFSD0pnNddlsdZ6Wm/ssdcwJzPLiNocr2Vk/2C3ErGT8Yzsge6BqpkXldYzBJ1hq6BEQmVCHU0Zj1fHWo2G8HF+heLlmgCyzg8HmeP9jPDCzf2b/kEbwHdmvFH3ntH4CHmW+Nn1KW6On3/VIARTgB4r2gXn2OGD002bptwnFAikI1jbNqGa8dIc/DVGQDkYNcfy9TotYI0l4yupJZE9m/pKkJMZTub1M2bE6kRD6+hi0gmGq0Km3PIj4PKNxm4mJFSq5z5Ix+lfsGJ0EOte9O//sxa7FAZj1BvbkShImnt8Us4oMiZ+iC8/5+al+lG1YJL4oRDg8ktZwhHdnZqOZ5Ccxq7gmFVUKFp8C4tn1Yn8V8G55iTm3dciBd74QrB54gy5dTXv+QhCp+1Jb9YiZIrYf0tKkJqmizAg4/QEYHo52q0ETFtOkpV/iVhmCIYP8GdVBPlmBsnlT0NeBY9uVo+EBCGjLUicTs0aMV1EI7Mvd9Vkiz+WO9eE3anDA8IW/Zj0VjHami/7QVw8UdmcCRUHT/ibNGAKplQsPEkML1LVKgJ4p6sXgDkkpfBIqPFye9DkafJ2frxOJxQxSiRz5sE3WB/R4ZQcm/XHG11UYO2zVL9+TlNFpTh4oyAdqRKKPLsjhUpniWusvU08r8aDGcq9MvHGtpXkoy7qF4uO7cjw=
-  app: celebrityRichList
+  app: celebrityrichlist
   on:
     repo: benweizhu/celebrityRichList
