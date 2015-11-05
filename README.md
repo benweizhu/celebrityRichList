@@ -10,9 +10,9 @@ execute **"npm install -g bower"** to install bower command line tool globally
   
 Then execute **"npm install"** and **"bower install"** to download the dependencies
 
-execute **"gulp"** to run build   
-execute **"gulp serve"** to start the local server   
-execute **"gulp test"** to run unit test   
-execute **"gulp protractor"** to run e2e test   
+execute **"gulp"** to build an optimized version of the application in folder dist   
+execute **"gulp serve"** to start the local server on source files with live reload   
+execute **"gulp test"** to run unit test with Karma   
+execute **"gulp protractor"** to run e2e tests with Protractor   
 
 
