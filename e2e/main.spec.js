@@ -14,6 +14,11 @@ describe('The main view', function () {
     expect(element.all(by.repeater('celebrity in main.data.celebrityList')).count()).toEqual(3);
   });
 
+  it('should only contain 50 celebrities when select "Show All" as birth place', function() {
+    page.birthPlace.sendKeys('Show All');
+    expect(element.all(by.repeater('celebrity in main.data.celebrityList')).count()).toEqual(50);
+  });
+
   it('should only contain 1 celebrity when type in "johnson" in search text field', function() {
     expect(element.all(by.repeater('celebrity in main.data.celebrityList')).count()).toEqual(50);
     page.searchText.sendKeys('johnson');

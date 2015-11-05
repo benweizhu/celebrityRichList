@@ -45,7 +45,6 @@
 
     it('should add "show all" and sorted options for birthPlace', function () {
       expect(vm.allInputs.birthPlace.options).toEqual([
-        {id: "Show All", name: "Show All"},
         {id: "Australia", name: "Australia"},
         {id: "Israel", name: "Israel"},
         {id: "United States", name: "United States"}]);

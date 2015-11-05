@@ -9,6 +9,7 @@
         <div class="query-filter">
           <label for="birthPlaceSelect">Birthplace:</label>
           <select name="birthPlace" id="birthPlaceSelect" ng-model="main.allInputs.birthPlace.selected">
+            <option value='Show All'>Show All</option>
             <option ng-repeat="option in main.allInputs.birthPlace.options" value="{{option.id}}">{{option.name}}
             </option>
           </select>

@@ -1,12 +1,14 @@
-(function() {
+(function () {
   'use strict';
 
   angular
     .module('celebrityRichList')
-    .factory('celebrityList', function($resource) {
-      return $resource('/app/json/celebrityRichList.json');
+    .constant('celebrityUrl', '/app/json/celebrityRichList.json')
+    .constant('currencyRateUrl', '/app/json/currencyRate.json')
+    .factory('celebrityList', function ($resource, celebrityUrl) {
+      return $resource(celebrityUrl);
     })
-    .factory('currencyRate', function($resource){
-      return $resource('/app/json/currentyRate.json');
+    .factory('currencyRate', function ($resource, currencyRateUrl) {
+      return $resource(currencyRateUrl);
     });
 })();

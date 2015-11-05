@@ -42,7 +42,6 @@
           return {id: item.country, name: item.country}
         })
         .sortBy('id')
-        .unshift({id: 'Show All', name: 'Show All'})
         .value()
     }
   }
