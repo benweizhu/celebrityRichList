@@ -1,6 +1,8 @@
 # celebrityRichList
 
-*Project is running on TRAVIS-CI.*
+*Project is building and automate deployed to heroku by TRAVIS-CI.*
+
+*Heroku host: [https://celebrityrichlist.herokuapp.com](https://celebrityrichlist.herokuapp.com "https://celebrityrichlist.herokuapp.com")*
 
 [![Build Status](https://travis-ci.org/benweizhu/celebrityRichList.svg?branch=master)](https://travis-ci.org/benweizhu/celebrityRichList)
 
