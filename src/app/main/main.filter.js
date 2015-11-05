@@ -6,6 +6,18 @@
     EUR: '€'
   };
 
+  var orderMap = {
+    Rank: function (items) {
+      return items;
+    },
+    Age: function (items) {
+      return _.sortBy(items, 'age');
+    },
+    Name: function (items) {
+      return _.sortBy(items, 'name');
+    }
+  }
+
   angular
     .module('celebrityRichList')
     .filter('countryFilter', function () {
@@ -15,13 +27,7 @@
     })
     .filter('rankFilter', function () {
       return function (items, selectedOrderType) {
-        if (selectedOrderType === 'Rank') {
-          return items;
-        } else if (selectedOrderType === 'Age') {
-          return _.sortBy(items, 'age');
-        } else {
-          return _.sortBy(items, 'name');
-        }
+        return orderMap[selectedOrderType](items);
       };
     })
     .filter('currencyConverter', function ($filter) {
