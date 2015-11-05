@@ -7,6 +7,6 @@
       return $resource('/app/json/celebrityRichList.json');
     })
     .factory('currencyRate', function($resource){
-      return $resource('http://api.fixer.io/latest?base=USD');
+      return $resource('/app/json/currentyRate.json');
     });
 })();
