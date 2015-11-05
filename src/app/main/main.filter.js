@@ -16,7 +16,7 @@
     Name: function (items) {
       return _.sortBy(items, 'name');
     }
-  }
+  };
 
   angular
     .module('celebrityRichList')
