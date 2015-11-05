@@ -1,5 +1,7 @@
 # celebrityRichList
 
+*Project is running on TRAVIS-CI.*
+
 [![Build Status](https://travis-ci.org/benweizhu/celebrityRichList.svg?branch=master)](https://travis-ci.org/benweizhu/celebrityRichList)
 
 You need to install **node** with **npm** first
