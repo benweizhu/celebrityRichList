@@ -6,3 +6,5 @@ execute "gulp" to run build
 execute "gulp serve" to start the local server   
 execute "gulp test" to run unit test   
 execute "gulp protractor" to run e2e test   
+
+Travis-CI Status:
