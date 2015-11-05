@@ -35,11 +35,11 @@
 
     function birthPlaceOptions(celebrityList) {
       return _.chain(celebrityList)
+        .uniq(function (item) {
+          return item.country;
+        })
         .map(function (item) {
           return {id: item.country, name: item.country}
-        })
-        .uniq(function (item) {
-          return item.id;
         })
         .sortBy('id')
         .unshift({id: 'Show All', name: 'Show All'})

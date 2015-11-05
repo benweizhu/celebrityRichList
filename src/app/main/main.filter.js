@@ -30,21 +30,15 @@
         return orderMap[selectedOrderType](items);
       };
     })
-    .filter('currencyConverter', function ($filter) {
+    .filter('currencyConverter', function (currencyFilter) {
       return function (amount, selectedCurrency, currencyRate) {
         var rate = currencyRate.rates[selectedCurrency];
-        return rate ? $filter('currency')(amount * rate, currencyMap[selectedCurrency], 0) : $filter('currency')(amount, '$', 0);
+        return rate ? currencyFilter(amount * rate, currencyMap[selectedCurrency], 0) : currencyFilter(amount, '$', 0);
       };
     });
 
   function filterCountry(items, selectedCountry) {
-    var filtered = [];
-    _.each(items, function (item) {
-      if (selectedCountry === item.country) {
-        filtered.push(item);
-      }
-    });
-    return filtered;
+    return _.chain(items).filter(function(item){ return item.country === selectedCountry;}).value();
   }
 
 })();

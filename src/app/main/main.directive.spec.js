@@ -2,26 +2,26 @@
   'use strict';
 
   describe('Main directives', function () {
-    var $compile, $rootScope;
+    var $compile, $scope, $document;
 
     beforeEach(module('celebrityRichList'));
 
-    beforeEach(inject(function (_$compile_, _$rootScope_) {
+    beforeEach(inject(function (_$compile_, _$rootScope_,_$document_) {
       $compile = _$compile_;
-      $rootScope = _$rootScope_;
+      $scope = _$rootScope_.$new();
+      $document = _$document_;
     }));
 
     it('Replaces the element with the appropriate content', function () {
-      var element = $compile("<page-loader></page-loader>")($rootScope);
-
-      $rootScope.$digest();
+      var element = $compile("<page-loader></page-loader>")($scope);
+      element.appendTo($document.find('body'));
       expect(element.html()).toEqual('Please wait!!! Application is requesting for latest currency rate data.');
 
-      $rootScope.$broadcast("$routeChangeStart");
-      expect(element.hasClass('ng-hide')).toEqual(false);
+      $scope.$broadcast("$routeChangeStart");
+      expect($scope.showAlert).toEqual(true);
 
-      $rootScope.$broadcast("$routeChangeSuccess");
-      expect(element.hasClass('ng-hide')).toEqual(true);
+      $scope.$broadcast("$routeChangeSuccess");
+      expect($scope.showAlert).toEqual(false);
     });
   });
 })();

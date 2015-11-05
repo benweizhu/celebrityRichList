@@ -2,20 +2,19 @@
   'use strict';
   angular
     .module('celebrityRichList')
-    .directive('pageLoader', function ($rootScope) {
+    .directive('pageLoader', function () {
       return {
         restrict: 'E',
         replace: true,
-        template: '<div class="alert alert-success text-center ng-hide">Please wait!!! Application is requesting for latest currency rate data.</div>',
-        link: function (scope, element) {
-          var routeChangeStartCallback = $rootScope.$on('$routeChangeStart', function () {
-            element.removeClass('ng-hide');
+        template: '<div class="alert alert-success text-center" ng-show="showAlert">Please wait!!! Application is' +
+        ' requesting for latest currency rate data.</div>',
+        link: function (scope) {
+          scope.$on('$routeChangeStart', function () {
+            scope.showAlert = true;
           });
-          var routeChangeSuccessCallback = $rootScope.$on('$routeChangeSuccess', function () {
-            element.addClass('ng-hide');
+          scope.$on('$routeChangeSuccess', function () {
+            scope.showAlert = false;
           });
-          $rootScope.$on('$destroy', routeChangeStartCallback);
-          $rootScope.$on('$destroy', routeChangeSuccessCallback);
         }
       };
     });
