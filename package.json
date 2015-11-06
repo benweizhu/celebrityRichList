@@ -47,7 +47,7 @@
     "wrench": "~1.5.8"
   },
   "scripts": {
-    "test": "gulp test",
+    "test": "gulp test & gulp protractor",
     "start": "./node_modules/.bin/gulp serve:dist",
     "postinstall": "./node_modules/.bin/bower install"
   },
