@@ -17,4 +17,6 @@ execute **"gulp serve"** to start the local server on source files with live rel
 execute **"gulp test"** to run unit test with Karma   
 execute **"gulp protractor"** to run e2e tests with Protractor   
 
+execute **"npm test"** to run unit test & e2e tests   
+
 
