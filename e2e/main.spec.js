@@ -2,7 +2,7 @@
 
 describe('The main view', function () {
     var page;
-    const number = 500;
+    var number = 500;
     beforeEach(function () {
         browser.get('/');
         page = require('./main.po');
