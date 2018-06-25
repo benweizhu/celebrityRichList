@@ -21,7 +21,7 @@
     "gulp-minify-css": "~1.2.1",
     "gulp-minify-html": "~1.0.4",
     "gulp-ng-annotate": "~1.1.0",
-    "gulp-protractor": "~1.0.0",
+    "gulp-protractor": "~2.5.0",
     "gulp-rename": "~1.2.2",
     "gulp-replace": "~0.5.4",
     "gulp-rev": "~6.0.1",
@@ -44,12 +44,15 @@
     "phantomjs": "~1.9.18",
     "uglify-save-license": "~0.4.1",
     "wiredep": "~2.2.2",
-    "wrench": "~1.5.8"
+    "wrench": "~1.5.8",
+    "snyk": "^1.85.0"
   },
   "scripts": {
     "test": "gulp test & gulp protractor",
     "start": "./node_modules/.bin/gulp serve:dist",
-    "postinstall": "./node_modules/.bin/bower install"
+    "postinstall": "./node_modules/.bin/bower install",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "estraverse": "~4.1.0",
@@ -97,5 +100,6 @@
   },
   "engines": {
     "node": "4.1.1"
-  }
+  },
+  "snyk": true
 }
