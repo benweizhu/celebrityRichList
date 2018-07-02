@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "dependencies": {
     "bower": "^1.6.5",
-    "browser-sync": "~2.9.11",
+    "browser-sync": "~2.12.9",
     "browser-sync-spa": "~1.0.3",
     "chalk": "~1.1.1",
     "del": "~2.0.2",
     "eslint-plugin-angular": "~0.12.0",
     "estraverse": "~4.1.0",
     "gulp": "^3.9.0",
-    "gulp-angular-filesort": "~1.1.1",
+    "gulp-angular-filesort": "~1.2.0",
     "gulp-angular-templatecache": "~1.8.0",
     "gulp-autoprefixer": "~3.0.2",
     "gulp-eslint": "~4.0.0",
@@ -30,26 +30,29 @@
     "gulp-size": "~2.0.0",
     "gulp-sourcemaps": "~1.6.0",
     "gulp-uglify": "~1.4.1",
-    "gulp-useref": "~1.3.0",
+    "gulp-useref": "~2.0.0",
     "gulp-util": "~3.0.6",
-    "http-proxy-middleware": "~0.9.0",
-    "karma": "~0.13.10",
+    "http-proxy-middleware": "~0.13.0",
+    "karma": "~2.0.0",
     "karma-angular-filesort": "~1.0.0",
     "karma-coverage": "~0.5.2",
     "karma-jasmine": "~0.3.6",
     "karma-ng-html2js-preprocessor": "~0.2.0",
-    "karma-phantomjs-launcher": "~0.2.1",
-    "lodash": "~3.10.1",
+    "karma-phantomjs-launcher": "~1.0.0",
+    "lodash": "~4.17.5",
     "main-bower-files": "~2.9.0",
     "phantomjs": "~1.9.18",
     "uglify-save-license": "~0.4.1",
     "wiredep": "~2.2.2",
-    "wrench": "~1.5.8"
+    "wrench": "~1.5.8",
+    "snyk": "^1.88.0"
   },
   "scripts": {
     "test": "gulp test & gulp protractor",
     "start": "./node_modules/.bin/gulp serve:dist",
-    "postinstall": "./node_modules/.bin/bower install"
+    "postinstall": "./node_modules/.bin/bower install",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "estraverse": "~4.1.0",
@@ -97,5 +100,6 @@
   },
   "engines": {
     "node": "4.1.1"
-  }
+  },
+  "snyk": true
 }
