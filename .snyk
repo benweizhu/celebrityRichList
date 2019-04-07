@@ -1,0 +1,61 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.3
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - browser-sync > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2019-04-07T05:20:51.895Z'
+    - karma > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2019-04-07T05:20:51.895Z'
+  'npm:hoek:20180212':
+    - phantomjs > request > hawk > hoek:
+        patched: '2019-04-07T05:20:51.895Z'
+    - phantomjs > request > hawk > boom > hoek:
+        patched: '2019-04-07T05:20:51.895Z'
+    - phantomjs > request > hawk > sntp > hoek:
+        patched: '2019-04-07T05:20:51.895Z'
+    - phantomjs > request > hawk > cryptiles > boom > hoek:
+        patched: '2019-04-07T05:20:51.895Z'
+  'npm:lodash:20180130':
+    - browser-sync-spa > opt-merger > lodash:
+        patched: '2019-04-07T05:20:51.895Z'
+    - karma-angular-filesort > ng-dependencies > lodash:
+        patched: '2019-04-07T05:20:51.895Z'
+    - browser-sync > eazy-logger > opt-merger > lodash:
+        patched: '2019-04-07T05:20:51.895Z'
+    - browser-sync > foxy > eazy-logger > opt-merger > lodash:
+        patched: '2019-04-07T05:20:51.895Z'
+  'npm:minimatch:20160620':
+    - browser-sync > foxy > resp-modifier > minimatch:
+        patched: '2019-04-07T05:20:51.895Z'
+    - gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2019-04-07T05:20:51.895Z'
+    - main-bower-files > vinyl-fs > glob-stream > minimatch:
+        patched: '2019-04-07T05:20:51.895Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2019-04-07T05:20:51.895Z'
+    - gulp-useref > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2019-04-07T05:20:51.895Z'
+    - main-bower-files > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2019-04-07T05:20:51.895Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2019-04-07T05:20:51.895Z'
+    - gulp-useref > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2019-04-07T05:20:51.895Z'
+    - main-bower-files > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2019-04-07T05:20:51.895Z'
+  'npm:ms:20170412':
+    - browser-sync > socket.io > socket.io-adapter > socket.io-parser > debug > ms:
+        patched: '2019-04-07T05:20:51.895Z'
+    - karma > socket.io > socket.io-adapter > socket.io-parser > debug > ms:
+        patched: '2019-04-07T05:20:51.895Z'
+  'npm:request:20160119':
+    - phantomjs > request:
+        patched: '2019-04-07T05:20:51.895Z'
+  'npm:tough-cookie:20170905':
+    - phantomjs > request > tough-cookie:
+        patched: '2019-04-07T05:20:51.895Z'
+  'npm:tunnel-agent:20170305':
+    - phantomjs > request > tunnel-agent:
+        patched: '2019-04-07T05:20:51.895Z'
