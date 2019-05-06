@@ -44,12 +44,15 @@
     "phantomjs": "~1.9.18",
     "uglify-save-license": "~0.4.1",
     "wiredep": "~2.2.2",
-    "wrench": "~1.5.8"
+    "wrench": "~1.5.8",
+    "snyk": "^1.161.1"
   },
   "scripts": {
     "test": "gulp test & gulp protractor",
     "start": "./node_modules/.bin/gulp serve:dist",
-    "postinstall": "./node_modules/.bin/bower install"
+    "postinstall": "./node_modules/.bin/bower install",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "estraverse": "~4.1.0",
@@ -97,5 +100,6 @@
   },
   "engines": {
     "node": "4.1.1"
-  }
+  },
+  "snyk": true
 }
